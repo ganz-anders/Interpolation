@@ -1,4 +1,4 @@
-%% gaining data
+%% 1. gaining data
 
 sz=100;
 X=1:49;
@@ -16,7 +16,7 @@ x=data(:,1);
 y=data(:,2);
 z=data(:,3);
 
-%% displaying data points
+%% 1.2 displaying data points
 
 % plot location of data points
 %plot(x,y,'.');
@@ -37,23 +37,3 @@ colorbar
 hold
 clear tbl
 
-%% calculating distance and semivariance
-
-distance_variance=zeros(sum(1:length(data)-1),2);
-h=1;
-for i=1:length(data)
-  for j=i+1:length(data)
-    distance_variance(h,1)=sqrt((data(i,1)-data(j,1))^2+(data(i,2)-data(j,2))^2);
-    distance_variance(h,2)=(data(i,3)-data(j,3))^2;
-    h=h+1;
-  end
-end
-
-%distance_variance=tall(distance_variance);
-
-%% display semi-variogram
-figure
-scatter(distance_variance(:,1),distance_variance(:,2)/2, '.')
-title('(Semi-)Variogrammwolke')
-ylabel('Abweichung');
-xlabel('Abstand')

@@ -16,6 +16,7 @@ Verwendet werden die RBFs zum Glätten leicht variierender Oberflächen wie beis
 Weiterhin sind radiale Basisfunktionen
 
 Um zu interpolieren wird über jedem Punkt, ob Messwert oder nicht, eine der fünf Basisfunktionen gebildet.
+
 https://pro.arcgis.com/de/pro-app/latest/help/analysis/geostatistical-analyst/GUID-55B030C7-1DF2-40FC-A2E3-7BA4B569938F-web.png 21.9.2022 10:36, spezieller Fall der multiquadratischen RBF
 Die Funktion ändert sich mit Abstand von einem gemessenen Punkt, da die "Funktionswerte nur vom euklidischen Abstand der Argumente abhängig sind"[1]. Dasselbe passiert mit den Neuronenantworten entsprechend des Abstandes der Reize zum Zentrum des Empfängers.
 Die Vorhersage der Werte wird nun durch die gewichteten Durchschnittswerte zwischen den Werten, die die RBFs an der zu interpolierenden Stelle annehmen (siehe Grafik) gebildet. Die durch die verschiedenen Funktionen gegebenen Werte werden gemittelt und gewichtet um einen Wert für die Interpolation der Oberfläche herauszubekommen.
@@ -23,8 +24,11 @@ Die Gewichtungen der Werte ergeben sich durch Verschiebung der Vorhersage an ein
 Um eine möglichst ebene Oberfläche zu erhalten, enthalten alle RBFs einen Parameter der die Glätte der Oberfläche überprüft. Für diesen gilt allgemein: "Je höher der Parameterwert, desto glatter ist die Karte". Allein bei der inversen, multiquadratischen Basisfunktion gilt das Gegenteil. Ein niedriger Parameterwert führt hier zu einer glatteren Oberfläche.
 
 [¹]: https://num.math.uni-goettingen.de/picap/pdf/E562.pdf 22.9.2022 11:51
+
 [²]: https://desktop.arcgis.com/de/arcmap/10.7/tools/spatial-analyst-toolbox/comparing-interpolation-methods.htm#ESRI_SECTION1_44CF7274A3FE455DB9D528308BB8001D 22.9.2022 12:21
+
 [³]: https://datamines.de/cross-validation/ 22.9.2022 17:36
+
 [4]: https://www.spektrum.de/lexikon/neurowissenschaft/radiales-basisfunktionen-netzwerk/10668 22.9.2022 10:03
 
 Quellen:

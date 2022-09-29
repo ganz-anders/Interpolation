@@ -1,11 +1,16 @@
 %% gaining data
 
 sz=100;
+X=1:49;
+Y=1:49;
+[X,Y]=meshgrid(X,Y);
+Plane=plane(X,Y);
+
 data=zeros(sz,3);
 data(:,1:2)=rand(sz,2).*6-3;
 data(:,3)=peaks(data(:,1),data(:,2));
-
 data(:,1:2)=(data(:,1:2)+3)/6*49;
+data(:,3)=data(:,3)+plane(data(:,1),data(:,2));
 
 x=data(:,1);
 y=data(:,2);
@@ -22,9 +27,9 @@ z=data(:,3);
 % scatter plot of data points (color shows z value)
 tiledlayout(1,2)
 nexttile
-surf(peaks)
+surf(peaks+Plane)
 nexttile
-contour(peaks);
+contour(peaks+Plane);
 hold
 tbl=array2table(data,"VariableNames",{'x','y','z'});
 scatter(tbl,"x","y", 'filled', 'ColorVariable','z')
@@ -35,7 +40,6 @@ clear tbl
 %% calculating distance and semivariance
 
 distance_variance=zeros(sum(1:length(data)-1),2);
-
 h=1;
 for i=1:length(data)
   for j=i+1:length(data)
@@ -45,9 +49,11 @@ for i=1:length(data)
   end
 end
 
+%distance_variance=tall(distance_variance);
+
 %% display semi-variogram
 figure
-plot(distance_variance(:,1),distance_variance(:,2)/2, '.')
+scatter(distance_variance(:,1),distance_variance(:,2)/2, '.')
 title('(Semi-)Variogrammwolke')
 ylabel('Abweichung');
 xlabel('Abstand')

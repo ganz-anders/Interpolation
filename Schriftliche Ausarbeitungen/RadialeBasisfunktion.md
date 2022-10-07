@@ -25,8 +25,11 @@ Die Gewichtungen der Werte ergeben sich durch Verschiebung der Vorhersage an ein
 Um eine möglichst ebene Oberfläche zu erhalten, enthalten alle RBFs einen Parameter der die Glätte der Oberfläche überprüft. Für diesen gilt allgemein: 'Je höher der Parameterwert, desto glatter ist die Karte'. Nur bei der inversen, multiquadratischen Basisfunktion gilt das Gegenteil. Ein niedriger Parameterwert führt hier zu einer glatteren Oberfläche.
 
 [¹]: https://num.math.uni-goettingen.de/picap/pdf/E562.pdf 22.9.2022 11:51
+
 [²]: https://desktop.arcgis.com/de/arcmap/10.7/tools/spatial-analyst-toolbox/comparing-interpolation-methods.htm#ESRI_SECTION1_44CF7274A3FE455DB9D528308BB8001D 22.9.2022 12:21
+
 [³]: https://datamines.de/cross-validation/ 22.9.2022 17:36
+
 [4]: https://www.spektrum.de/lexikon/neurowissenschaft/radiales-basisfunktionen-netzwerk/10668 22.9.2022 10:03
 
 Quellen:

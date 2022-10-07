@@ -18,7 +18,7 @@ Weiterhin sind radiale Basisfunktionen
 
 Um zu interpolieren wird über jedem Punkt, ob Messwert oder nicht, eine der fünf Basisfunktionen gebildet.
 ![spezieller Fall der multiquadratischen RBF, 21.9.2022 10:36](https://pro.arcgis.com/de/pro-app/latest/help/analysis/geostatistical-analyst/GUID-55B030C7-1DF2-40FC-A2E3-7BA4B569938F-web.png)
-Die Funktion ändert sich mit Abstand von einem gemessenen Punkt, da die "Funktionswerte nur vom euklidischen Abstand der Argumente abhängig sind"[^1].
+Die Funktion ändert sich mit Abstand von einem gemessenen Punkt, da die "Funktionswerte nur vom euklidischen Abstand der Argumente abhängig sind"[^6].
 Dasselbe passiert vermutlich mit den Neuronenantworten in unseren Gehirnen.
 
 Die Vorhersage der Werte wird nun durch die gewichteten Durchschnittswerte zwischen den Werten, die die RBFs an der zu interpolierenden Stelle annehmen (siehe Grafik) gebildet. Die durch die verschiedenen Funktionen gegebenen Werte werden gemittelt und gewichtet um einen Wert für die Interpolation der Oberfläche zu erhalten.
@@ -33,9 +33,8 @@ Um eine möglichst ebene Oberfläche zu erhalten, enthalten alle RBFs einen Para
 
 [^4]: https://www.spektrum.de/lexikon/neurowissenschaft/radiales-basisfunktionen-netzwerk/10668 22.9.2022, 10:03
 
-Quellen:
+[^5]: Quellen:
 https://desktop.arcgis.com/de/arcmap/10.4/extensions/geostatistical-analyst/how-radial-basis-functions-work.htm 27.7.2022, 17:30
 Vorlesungsfolien Einführung in die Geoinformatik Nummer 5 und 6, sowie Notizen dazu
 
-Zitate:
-[1]: https://num.math.uni-goettingen.de/picap/pdf/E562.pdf Seite 8, Zeile 4f.
+[^6]: Zitat: https://num.math.uni-goettingen.de/picap/pdf/E562.pdf Seite 8, Zeile 4f.

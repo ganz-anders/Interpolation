@@ -2,6 +2,7 @@
 
 Die Interpolation mittels der radialen Basisfunktionen (RBF) ist eine nicht gitterbasierte, exakte Interpolationsmethode. Das bedeutet, dass die Oberfläche durch alle Messpunkte des Geländes verlaufen muss. Ziel dieser Interpolationsmethode ist es mit den Funktionen die Oberfläche weitestgehend zu glätten. Dafür gibt es fünf verschiedene radiale Basisfunktionen mit je verschiedenen Formen, die entsprechend zu unterschiedlichen Interpolationsflächen führen.[^1]
 
+/home/lena/Dokumente/Studium/2.Semester/Geoinformatik/Projekt_Interpolation/Bildschirmfoto von 2022-09-22 12-40-49.xcf
 ![Die verschiedenen Funktionen, Seite 8, 7.10.2022, 15:09](https://num.math.uni-goettingen.de/picap/pdf/E562.pdf)
 Alle RBFs sind Sonderformen der Splines, das heißt ein kubisches Polynom ist die Basis für die Interpolation. Splines sind stark mit den radialen Basisfunktionen verbunden. Sie sind auch nicht gitterbasiert, die Werte werden mittels mathematischen Funktonen bestimmt, die Oberfläche wird geglättet und verläuft durch die Messpunkte. Splines sind aufgrund ihrer Recheneigenschaften sehr beliebt. [^2]
 

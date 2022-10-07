@@ -2,7 +2,6 @@
 
 Die Interpolation mittels der radialen Basisfunktionen (RBF) ist eine nicht gitterbasierte, exakte Interpolationsmethode. Das bedeutet, dass die Oberfläche durch alle Messpunkte des Geländes verlaufen muss. Ziel dieser Interpolationsmethode ist es mit den Funktionen die Oberfläche weitestgehend zu glätten. Dafür gibt es fünf verschiedene radiale Basisfunktionen mit je verschiedenen Formen, die entsprechend zu unterschiedlichen Interpolationsflächen führen.[^1]
 
-/home/lena/Dokumente/Studium/2.Semester/Geoinformatik/Projekt_Interpolation/Bildschirmfoto von 2022-09-22 12-40-49.xcf
 ![Die verschiedenen Funktionen, Seite 8, 7.10.2022, 15:09](https://num.math.uni-goettingen.de/picap/pdf/E562.pdf)
 Alle RBFs sind Sonderformen der Splines, das heißt ein kubisches Polynom ist die Basis für die Interpolation. Splines sind stark mit den radialen Basisfunktionen verbunden. Sie sind auch nicht gitterbasiert, die Werte werden mittels mathematischen Funktonen bestimmt, die Oberfläche wird geglättet und verläuft durch die Messpunkte. Splines sind aufgrund ihrer Recheneigenschaften sehr beliebt. [^2]
 
@@ -27,6 +26,7 @@ Dasselbe passiert vermutlich mit den Neuronenantworten in unseren Gehirnen.
 Die Vorhersage der Werte wird nun durch die gewichteten Durchschnittswerte zwischen den Werten, die die RBFs an der zu interpolierenden Stelle annehmen (siehe Grafik) gebildet. Die durch die verschiedenen Funktionen gegebenen Werte werden gemittelt und gewichtet um einen Wert für die Interpolation der Oberfläche zu erhalten.
 Die Gewichtungen der Werte ergeben sich durch Verschiebung der Vorhersage an einen Punkt mit gemessenem Wert. Wird eine Vorhersage an einen Punkt mit gemessenen Werten verschoben, stimmt die RBF an dieser Stelle, da ihr ja ein Messwert als Ausgangswert der Funktion zugrunde liegt. Das führt zu einer unbekannten Menge an Gleichungen mit derselben unbekannten Menge an Unbekannten. Das entstandene Gleichungssystem kann damit eindeutig gelöst werden und sorgt für genaue Vorhersagen im gesamten Oberflächenbereich. Die Lösbarkeit und Eindeutigkeit sind stark abhängig von der Wahl der Basisfunktion und dem Parameter zur Glättung. Gegebenenfalls ereicht man nämlich stark verschiedene Ergebnisse mit den unterschiedlichen Funktionen.
 Um eine möglichst ebene Oberfläche zu erhalten, enthalten alle RBFs einen Parameter der die Glätte der Oberfläche überprüft. Für diesen gilt allgemein: 'Je höher der Parameterwert, desto glatter ist die Karte'. Nur bei der inversen, multiquadratischen Basisfunktion gilt das Gegenteil. Ein niedriger Parameterwert führt hier zu einer glatteren Oberfläche.
+![Interpolation mit verschiedenen Parameterwerten, Vorlesungsfolie 6, Seite 5](https://bildungsportal.sachsen.de/opal/g/PEEK_VIEW_WRAPPER--31697895425--99456742439238--1648006225572939012_global/Lecture_Notes_EinfGI_L6.pdf)
 
 
 [^1]: https://num.math.uni-goettingen.de/picap/pdf/E562.pdf 22.9.2022, 11:51

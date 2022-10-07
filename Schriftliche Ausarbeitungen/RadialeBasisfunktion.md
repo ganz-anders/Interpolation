@@ -10,7 +10,7 @@ Ziel der Interpolation ist es neben der Berechnung von Daten zwischen den gemess
 *Vor und Nachteile anhand der Gittermethoden*
 Die RBFs bieten hier Vorteile gegenüber der globalen oder lokalen Polynomeninterpolation, da die interpolierte Fläche durch die Messpunkte verläuft und damit tatsächlich gemessene Daten enthält. Im Vergleich zu den inversen und distanzgewichteten Profilen sagen die Basisfunktionen auch Werte über bzw. unter den gemessenen Werten voraus: 
 
-<https://desktop.arcgis.com/de/arcmap/10.4/extensions/geostatistical-analyst/GUID-8027C5DF-191E-4EF4-9BD7-AE8DA7A1BBFC-web.gif> 
+![Interpolation mittels RBF](https://desktop.arcgis.com/de/arcmap/10.4/extensions/geostatistical-analyst/GUID-8027C5DF-191E-4EF4-9BD7-AE8DA7A1BBFC-web.gif)
 21.9.2022 10:37
 
 Ein weiterer Vorteil ist, dass RBFs den zu interpolierenden Raum abhängig machen von den gegebenen Datenpunkten. Verändern sich die Messpunkte, verändert sich auch das Gebiet, welches interpoliert werden soll, da die interpolierte Fläche ja durch die Punkte verläuft. Das ist essentiell um im multivarianten Raum zu interpolieren. [¹]
@@ -21,8 +21,8 @@ Weiterhin sind radiale Basisfunktionen
 
 Um zu interpolieren wird über jedem Punkt, ob Messwert oder nicht, eine der fünf Basisfunktionen gebildet.
 
-<https://pro.arcgis.com/de/pro-app/latest/help/analysis/geostatistical-analyst/GUID-55B030C7-1DF2-40FC-A2E3-7BA4B569938F-web.png> 
-21.9.2022 10:36, spezieller Fall der multiquadratischen RBF
+![spezieller Fall der multiquadratischen RBF](https://pro.arcgis.com/de/pro-app/latest/help/analysis/geostatistical-analyst/GUID-55B030C7-1DF2-40FC-A2E3-7BA4B569938F-web.png)
+21.9.2022 10:36
 
 Die Funktion ändert sich mit Abstand von einem gemessenen Punkt, da die "Funktionswerte nur vom euklidischen Abstand der Argumente abhängig sind"[1].
 Dasselbe passiert vermutlich mit den Neuronenantworten in unseren Gehirnen.

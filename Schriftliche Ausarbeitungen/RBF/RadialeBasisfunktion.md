@@ -47,6 +47,8 @@ Interpolation mittels verschienender Parameter, wie in der Vorlesung 6, Folie 5.
 
 [^5]: Zitat: https://num.math.uni-goettingen.de/picap/pdf/E562.pdf Seite 8, Zeile 4f.
 
+
+
 Quellen:
 
 https://desktop.arcgis.com/de/arcmap/10.4/extensions/geostatistical-analyst/how-radial-basis-functions-work.htm 27.7.2022, 17:30

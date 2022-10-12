@@ -24,6 +24,5 @@ lineSill=line([0 max(middleVariance(:,1))],[C C],'Color','g');
 lineRange=line([A A],[0 C],'Color','g');
 lineNugget=line([0 A/2],[B B],'Color','green');
 hold off
-linkdata on
-%%
+linkdata on%%
 delete(gauPlot);

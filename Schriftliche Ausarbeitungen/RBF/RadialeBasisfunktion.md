@@ -1,10 +1,11 @@
 # Interpolation
-Unser Praktikumsthema ist die Interpolation. Warum interpolieren wir und was ist das überhaupt?
-Bei der Interpolation schätzen wir die Werte ab, welche in den Bereichen zwischen unseren Messwerten liegen und sagen diese vorher. Die angenommenen Werte in den Zwischenräumen werden je nach Funktion gewichtet. Wir betrachten hier speziell die radiale Basisfunktion. Eine eindimensionale Funktion, bei der die Messwerte genau getroffen werden. Dabei sind die Werte nur vom Ort und dem Abstand, also dem Radius zum Messwert abhängig.
+Interpolation ist das Abschätzen von Werten in den Bereichen zwischen bemessenen Datenpunkten. Die angenäherten Werte in den Zwischenräumen werden je nach Funktion gewichtet.
+*hier fehlt was*  
+Wir betrachten hier speziell die radiale Basisfunktion, eine eindimensionale Funktion, bei der die Messwerte genau getroffen werden. Dabei sind die Werte nur vom Ort und dem Abstand, also dem Radius zum Messwert abhängig.
 
 ## Radiale Basisfunktion
 
-Die Interpolation mittels der radialen Basisfunktionen (RBF) ist eine nicht gitterbasierte, exakte Interpolationsmethode. Das bedeutet wie oben erwähnt, dass die interpolierte Fläche durch alle Messpunkte des Gebietes verlaufen muss. Ziel dieser Interpolationsmethode ist es, mit den Funktionen die Oberfläche weitestgehend zu glätten. Dafür gibt es fünf verschiedene radiale Basisfunktionen mit je verschiedenen Formen, die entsprechend zu unterschiedlichen Interpolationsflächen führen. Dabei wird die Fläche glätter, wenn man eine Funktion verwendet, die oft differenzierbar ist.[^1]
+Die Interpolation mittels der radialen Basisfunktionen (RBF) ist eine nicht gitterbasierte, exakte Interpolationsmethode. Das bedeutet, dass alle Messpunkte in der interpolierten Oberfläche enthalten sind. Ziel dieser Interpolationsmethode ist es, mit den Funktionen die Oberfläche weitestgehend zu glätten. Dafür gibt es fünf verschiedene radiale Basisfunktionen mit je verschiedenen Formen, die entsprechend zu unterschiedlichen Interpolationsflächen führen. Dabei wird die Fläche glatter, je öfter differentierbar die verwendete Funktion ist.
 
 ![Die verschiedenen Funktionen, Seite 8, 7.10.2022, 15:09](Formeln.jpg)
 

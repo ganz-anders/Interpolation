@@ -16,6 +16,7 @@ Die Interpolation mittels RBFs kann man sich sich vorstellen, als würde eine Gu
 Ziel der Interpolation ist es neben der Berechnung von Daten zwischen den gemessenen Werten die insgesammte Oberflächenwölbung der durch die Interpolation entstehende Fläche zu minimieren.
 
 Die RBFs bieten hier Vorteile gegenüber der globalen oder lokalen Polynomeninterpolation, da die interpolierte Fläche durch die Messpunkte verläuft und damit tatsächlich gemessene Daten enthält. Im Vergleich zu den inversen und distanzgewichteten Profilen sagen die Basisfunktionen auch Werte über bzw. unter den gemessenen Werten voraus:
+
 ![Interpolation mittels RBF, 21.9.2022, 10:37](https://desktop.arcgis.com/de/arcmap/10.4/extensions/geostatistical-analyst/GUID-8027C5DF-191E-4EF4-9BD7-AE8DA7A1BBFC-web.gif)
 
 Vorteile ergeben sich auch durch die Gitterfreiheit der Interpolation. Gitterbasierter Interpolation liegt immer zuerst eine Triangulierung oder das Bilden eines Mosaikes zugrunde. Diese Vorarbeit entfällt hier und beschleunigt damit die Interpolation. Nummerisch sind die RBFs so zusammengefasst, dass man aus ihnen intuitive Eigenschaften ablesen kann. Zum Beispiel das Abfallen einer Funktion.
@@ -26,6 +27,7 @@ Verwendet werden die RBFs zum Glätten leicht variierender Oberflächen wie beis
 Weiterhin sind radiale Basisfunktionen
 
 Um zu interpolieren wird über jedem Punkt, ob Messwert oder nicht, eine der fünf Basisfunktionen gebildet.
+
 ![spezieller Fall der multiquadratischen RBF, 21.9.2022, 10:36](https://pro.arcgis.com/de/pro-app/latest/help/analysis/geostatistical-analyst/GUID-55B030C7-1DF2-40FC-A2E3-7BA4B569938F-web.png)
 
 Die Funktion ändert sich mit Abstand von einem gemessenen Punkt, da die "Funktionswerte nur vom euklidischen Abstand der Argumente abhängig sind"[^5].
@@ -34,6 +36,7 @@ Dasselbe passiert vermutlich mit den Neuronenantworten in unseren Gehirnen.
 Die Vorhersage der Werte wird nun durch die gewichteten Durchschnittswerte zwischen den Werten, die die RBFs an der zu interpolierenden Stelle annehmen (siehe Grafik) gebildet. Die durch die verschiedenen Funktionen gegebenen Werte werden gemittelt und gewichtet um einen Wert für die Interpolation der Oberfläche zu erhalten.
 Die Gewichtungen der Werte ergeben sich durch Verschiebung der Vorhersage an einen Punkt mit gemessenem Wert. Wird eine Vorhersage an einen Punkt mit gemessenen Werten verschoben, stimmt die RBF an dieser Stelle, da ihr ja ein Messwert als Ausgangswert der Funktion zugrunde liegt. Das führt zu so vielen Gleichungen, wie es gemessene Werte gibt. Sie enthalten unbekannte Gewichte. Das entstandene Gleichungssystem kann damit eindeutig gelöst werden und sorgt für genaue Vorhersagen im gesamten Oberflächenbereich. Die Lösbarkeit und Eindeutigkeit sind stark abhängig von der Wahl der Basisfunktion und dem Parameter zur Glättung. Gegebenenfalls ereicht man nämlich stark verschiedene Ergebnisse mit den unterschiedlichen Funktionen.
 Um eine möglichst ebene Oberfläche zu erhalten, enthalten alle RBFs einen Parameter der die Glätte der Oberfläche überprüft. Für diesen gilt allgemein: 'Je höher der Parameterwert, desto glatter ist die Karte'. Nur bei der inversen, multiquadratischen Basisfunktion gilt das Gegenteil. Ein niedriger Parameterwert führt hier zu einer glatteren Oberfläche.
+
 ![Interpolation mit verschiedenen Parameterwerten, Vorlesungsfolie 6, Seite 5](Bild1.jpg)
 ![Int. mit versch. Param.](Bild2.jpg)
 Interpolation mittels verschienender Parameter, wie in der Vorlesung 6, Folie 5.

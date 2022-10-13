@@ -18,6 +18,7 @@ Ziel der Interpolation ist es neben der Berechnung von Daten zwischen den gemess
 Die RBFs bieten hier Vorteile gegenüber der globalen oder lokalen Polynomeninterpolation, da die interpolierte Fläche durch die Messpunkte verläuft und damit tatsächlich gemessene Daten enthält. Im Vergleich zu den inversen und distanzgewichteten Profilen sagen die Basisfunktionen auch Werte über bzw. unter den gemessenen Werten voraus:
 
 ![Interpolation mittels RBF, 21.9.2022, 10:37](https://desktop.arcgis.com/de/arcmap/10.4/extensions/geostatistical-analyst/GUID-8027C5DF-191E-4EF4-9BD7-AE8DA7A1BBFC-web.gif)
+
 *Abb. 2: Interpolation mittels RBF, 21.9.2022, 10:37*
 
 Vorteile ergeben sich auch durch die Gitterfreiheit der Interpolation. Gitterbasierter Interpolation liegt immer zuerst eine Triangulierung oder das Bilden eines Mosaikes zugrunde. Diese Vorarbeit entfällt hier und beschleunigt damit die Interpolation. Nummerisch sind die RBFs so zusammengefasst, dass man aus ihnen intuitive Eigenschaften ablesen kann. Zum Beispiel das Abfallen einer Funktion.
@@ -30,6 +31,7 @@ Weiterhin sind radiale Basisfunktionen
 Um zu interpolieren wird über jedem Punkt, ob Messwert oder nicht, eine der fünf Basisfunktionen gebildet.
 
 ![spezieller Fall der multiquadratischen RBF, 21.9.2022, 10:36](https://pro.arcgis.com/de/pro-app/latest/help/analysis/geostatistical-analyst/GUID-55B030C7-1DF2-40FC-A2E3-7BA4B569938F-web.png)
+
 *Abb. 3: Spezieller Fall der multiquadratischen RBF, 21.9.2022, 10:36*
 
 Die Funktion ändert sich mit Abstand von einem gemessenen Punkt, da die "Funktionswerte nur vom euklidischen Abstand der Argumente abhängig sind"[^5].

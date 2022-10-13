@@ -82,3 +82,10 @@ tbl=array2table(data,"VariableNames",{'x','y','z'});
 scatter(tbl,"x","y", 'filled', 'ColorVariable','z')
 colorbar
 clear tbl
+
+%%
+function res = plane(x,y)
+a=0.13;
+b=0.278;
+res=a*x+b*y;
+end

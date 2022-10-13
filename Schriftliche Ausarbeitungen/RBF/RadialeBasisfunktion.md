@@ -11,12 +11,14 @@ Die Interpolation mittels der radialen Basisfunktionen (RBF) ist eine nicht gitt
 
 *Abb. 1: Die verschiedenen Funktionen, Seite 8[^1], 7.10.2022, 15:09*
 
-Splines sind stark mit den radialen Basisfunktionen verbunden. Sie sind auch nicht gitterbasiert, die Werte werden mittels mathematischen Funktionen bestimmt, die Oberfläche wird geglättet und verläuft durch die Messpunkte. Splines sind aufgrund ihrer Recheneigenschaften sehr beliebt. Bei den RBFs ist wie bei den Splines ein kubisches Polynom die Basis für die Interpolation. Trotzdem sind nicht alle RBFs Splines.[^2]
+### Splines
 
-Die Interpolation mittels RBFs kann man sich sich vorstellen, als würde eine Gummimatte in das vermessene Gelände gelegt. Anhaltspunkte sind hierbei die Messwerte. Die Werte dazwischen werden mittels Kreuzvalidierung bestimmt. Bei der Kreuzvalidierung wird die Genauigkeit der vorhergesagten Werte überprüft. Dazu wird die Interpolation mit Testdaten durchgeführt. Jetzt wird der zu erwartende Vorhersage-Fehler abgeschätzt. Die Beispielwerte und ihre Fehler werden nun untereinander verglichen und die Genauigkeit wird berechnet. [^3]
-Ziel der Interpolation ist es neben der Berechnung von Daten zwischen den gemessenen Werten, die insgesammte Oberflächenwölbung der durch die Interpolation entstehende Fläche zu minimieren.
+Splines sind stark mit den radialen Basisfunktionen verwandt. Sie sind auch nicht-gitterbasiert. Die Werte werden mittels mathematischer Funktionen bestimmt. Die Oberfläche wird geglättet und verläuft durch die Messpunkte. Splines sind aufgrund ihrer Recheneigenschaften sehr beliebt. Bei den RBFs ist wie bei den Splines ein kubisches Polynom die Basis für die Interpolation. Trotzdem sind nicht alle RBFs Splines.[^2]
 
-Die RBFs bieten hier Vorteile gegenüber der globalen oder lokalen Polynomeninterpolation, da die interpolierte Fläche durch die Messpunkte verläuft und damit tatsächlich gemessene Daten enthält. Im Vergleich zu den inversen und distanzgewichteten Profilen sagen die Basisfunktionen auch Werte über bzw. unter den gemessenen Werten voraus:
+Die Interpolation mittels RBFs ist bildlich vorstellbar, als würde eine Gummimatte in das vermessene Gelände gelegt werden, sodass diese sich an die Höhe der Messwerte anpasst und die Bereiche dazwischen ausgleicht. Die Genauigkeit der erechneten Werte zwischen den bemessenen Punkten werden mittels Kreuzvalidierung bestimmt. Dazu wird die Interpolation mit Testdaten durchgeführt und der zu erwartende Fehler Vorhersage abgeschätzt. Die Beispielwerte und ihre Fehler werden nun untereinander verglichen und die Genauigkeit wird berechnet. [^3]
+
+Ziel der Interpolation ist es, die insgesamte Oberflächenwölbung der entstehende Fläche zu minimieren, also eine hohe Glättung zu erzielen.
+Die RBFs bieten dabei Vorteile gegenüber der globalen oder lokalen Polynomeninterpolation, da aufgrund der Eigenschaft der Exaktheit die interpolierte Fläche die tatsächlichen Messwerte enthält. Im Vergleich zu den inversen und distanzgewichteten Profilen sagen die Basisfunktionen auch Werte über bzw. unter den gemessenen Werten voraus: *HIER FEHLT WAS*
 
 ![Interpolation mittels RBF, 21.9.2022, 10:37](https://desktop.arcgis.com/de/arcmap/10.4/extensions/geostatistical-analyst/GUID-8027C5DF-191E-4EF4-9BD7-AE8DA7A1BBFC-web.gif)
 

@@ -31,18 +31,17 @@ In der Glättung der Oberfläche liegt auch ein Nachteil. Enthält das tatsächl
 
 Verwendet werden die RBFs zum Glätten leicht variierender Oberflächen, wie beispielsweise Geländeprofile. Außerdem finden sie Verwendung in der angewandten Mathematik oder in den Neurowissenschaften. [^1] Es wird angenommen, dass unser Gehirn Reize analog zur Interpolation mit RBFs darstellt. Die Vermutung basiert darauf, dass Neuronenantworten in den primären sensorischen Arealen, ähnlich der Interpolation, abstandabhängig sind [^4].
 
-Um zu interpolieren wird über jedem Punkt eine der fünf Basisfunktionen gebildet.
+Um zu Interpolieren wird über jedem Punkt eine der fünf Basisfunktionen gebildet.
 
 ![spezieller Fall der multiquadratischen RBF, 21.9.2022, 10:36](https://pro.arcgis.com/de/pro-app/latest/help/analysis/geostatistical-analyst/GUID-55B030C7-1DF2-40FC-A2E3-7BA4B569938F-web.png)
 
 *Abb. 3: Spezieller Fall der multiquadratischen RBF, 21.9.2022, 10:36*
 
 Die Funktion ändert sich mit Abstand von einem gemessenen Punkt, da die "Funktionswerte nur vom euklidischen Abstand der Argumente abhängig sind"[^5].
-Dasselbe passiert vermutlich mit den Neuronenantworten in unseren Gehirnen.
 
 Die Vorhersage der Werte wird nun durch die gewichteten Durchschnittswerte zwischen den Werten, die die RBFs an der zu interpolierenden Stelle annehmen, (siehe Abb. 3) gebildet. Die durch die verschiedenen Funktionen gegebenen Werte werden gemittelt und gewichtet um einen Wert für die Interpolation der Oberfläche zu erhalten.
-Die Gewichtungen der Werte ergeben sich durch Verschiebung der Vorhersage an einen Punkt mit gemessenem Wert. Wird eine Vorhersage an einen Punkt mit gemessenen Werten verschoben, stimmt die RBF an dieser Stelle, da ihr ja ein Messwert als Ausgangswert der Funktion zugrunde liegt. Das führt zu so vielen Gleichungen, wie es gemessene Werte gibt. Sie enthalten unbekannte Gewichte. Das entstandene Gleichungssystem kann damit eindeutig gelöst werden und sorgt für genaue Vorhersagen im gesamten Oberflächenbereich. Die Lösbarkeit und Eindeutigkeit sind stark abhängig von der Wahl der Basisfunktion und dem Parameter zur Glättung. Gegebenenfalls ereicht man nämlich stark verschiedene Ergebnisse mit den unterschiedlichen Funktionen.
-Um eine möglichst ebene Oberfläche zu erhalten, enthalten alle RBFs einen Parameter, der die Glätte der Oberfläche überprüft. Für diesen gilt allgemein: 'Je höher der Parameterwert, desto glatter ist die Karte'. Nur bei der inversen, multiquadratischen Basisfunktion gilt das Gegenteil. Ein niedriger Parameterwert führt hier zu einer glatteren Oberfläche.
+Die Gewichtungen der Werte ergeben sich durch Verschiebung der Vorhersage an einen Punkt mit gemessenem Wert. Wird eine Vorhersage an einen Punkt mit gemessenen Werten verschoben, stimmt die RBF an dieser Stelle, da ihr ein Messwert als Ausgangswert der Funktion zugrunde liegt. Das führt zu so vielen Gleichungen, wie es gemessene Werte gibt. Sie enthalten unbekannte Gewichte. Das entstandene Gleichungssystem kann damit eindeutig gelöst werden und sorgt für genaue Vorhersagen im gesamten Oberflächenbereich. Die Lösbarkeit und Eindeutigkeit sind stark abhängig von der Wahl der Basisfunktion und dem Parameter zur Glättung. Gegebenenfalls werden mit den unterschiedlichen Funktionen stark verschiedene Ergebnisse erreicht.
+Um eine möglichst ebene Oberfläche zu erhalten, enthalten alle RBFs einen Parameter, der die Glätte der Oberfläche repräsentiert. Für diesen gilt allgemein: 'Je höher der Parameterwert, desto glatter ist die Karte'. Nur bei der inversen, multiquadratischen Basisfunktion gilt das Gegenteil. Ein niedriger Parameterwert führt hier zu einer glatteren Oberfläche.
 
 ![Interpolation mit verschiedenen Parameterwerten, Vorlesungsfolie 6, Seite 5](Bild1.jpg)
 ![Int. mit versch. Param.](Bild2.jpg)

@@ -1,7 +1,7 @@
 ## Implementierung
 
 ### Anmerkungen
-Die Skripte sollen ensprechend ihrer Nummerierung der Reinfolge nach ausgeführt werden. In Skript eins kann aus einer der Datanquellen gewählt und nur der jeweilige Unterabschnitt ausgeführt werden.
+Die Skripte sollen ensprechend ihrer Nummerierung der Reihenfolge nach ausgeführt werden. In Skript eins kann aus einer der Datenquellen gewählt und nur der jeweilige Unterabschnitt ausgeführt werden.
 * *implementations1* zum Erzeugen eines Datensatzes
 * *implementations2* zur Variogrammberechnung
 * *implementations3* zur Berechnung der Variogrammfunktion

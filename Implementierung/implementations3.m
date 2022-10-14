@@ -1,13 +1,13 @@
 figure
-p=plot(middleVariance(:,1),middleVariance(:,2),'-');
+p=plot(middleVariance(:,1),middleVariance(:,2),'o');
 x=1:1.2*max(middleVariance(:,1));
 title('Variogramm')
 ylabel('Abweichung');
 xlabel('Abstand')
 %% modifiy A,B,C to fit
-A=47;      %range
-B=0.5;     %nugget
-C=50;      %sill
+A=650;      %range
+B=158;     %nugget
+C=2800;      %sill
 yexp=(B+(C-B)*(1-exp(-3*x/A)));
 ygau=B+(C-B)*(1-exp(-3*(x.^2)/(A^2)));
 %% Exponential
